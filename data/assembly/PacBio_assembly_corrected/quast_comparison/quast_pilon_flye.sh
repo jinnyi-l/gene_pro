@@ -14,11 +14,11 @@ module load bioinfo-tools
 module load quast
 
 # Paths to the assembly files
-flye_assembly="/home/jili2251/genome_analysis_project/data/assembly/PacBio_assembly/assembly.fasta"
-pilon_assembly="/home/jili2251/genome_analysis_project/data/assembly/PacBio_assembly_corrrected/corrected_assembly.fasta"
+flye_assembly="/home/jili2251/gene_pro/data/assembly/PacBio_assembly/assembly.fasta"
+pilon_assembly="/home/jili2251/gene_pro/data/assembly/PacBio_assembly_corrected/PacBio_assembly_corrrected/corrected_assembly.fasta"
 
 # Output directory for QUAST results
-output_dir="/home/jili2251/genome_analysis_project/data/assembly/PacBio_assembly_corrrected/quast_comparison"
+output_dir="/home/jili2251/gene_pro/data/assembly/PacBio_assembly_corrrected/quast_comparison"
 
 
 # Run QUAST
