@@ -21,4 +21,4 @@ java -jar $TRIMMOMATIC_HOME/trimmomatic-0.39.jar PE \
      /home/jili2251/genome_analysis_project/data/preprocessed/trimmed_Illumina/SRR6058604_scaffold_06.2P.trimmed.fastq.gz \
      /home/jili2251/genome_analysis_project/data/preprocessed/trimmed_Illumina/SRR6058604_scaffold_06.2P.unpaired.fastq.gz \
      ILLUMINACLIP:$TRIMMOMATIC_HOME/adapters/TruSeq3-PE.fa:2:30:10 \
-     LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+     LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:36
