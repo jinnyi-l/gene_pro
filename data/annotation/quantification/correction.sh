@@ -7,15 +7,15 @@
 #SBATCH -J format_Correction
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user jinyi.li.2251@student.uu.se
-#SBATCH --output=/home/jili2251/genome_analysis_project/data/annotation/quantification/correctt.%j.out
-#SBATCH --error=/home/jili2251/genome_analysis_project/data/annotation/quantification/correct.%j.err
+#SBATCH --output=/home/jili2251/gene_pro/data/annotation/quantification/correctt.%j.out
+#SBATCH --error=/home/jili2251/gene_pro/data/annotation/quantification/correct.%j.err
 
 module load bioinfo-tools
 module load htseq  # Ensure HTSeq is loaded
 module load samtools  # Ensure samtools is loaded for any needed operations
 
-INPUT_GTF="/home/jili2251/genome_analysis_project/data/annotation/annotated_RNAseq/annotated_BRAKER/braker.gtf" 
-OUTPUT_GTF="/home/jili2251/genome_analysis_project/data/annotation/annotated_RNAseq/annotated_BRAKER/corrected.gtf"  
+INPUT_GTF="/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/annotated_BRAKER/braker.gtf" 
+OUTPUT_GTF="/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/annotated_BRAKER/corrected.gtf"  
 
 
 awk -v output_gtf="$OUTPUT_GTF" 'BEGIN {FS=OFS="\t"} {
