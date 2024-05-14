@@ -13,11 +13,11 @@
 module load bioinfo-tools
 module load quast
 
-flye_assembly="/home/jili2251/genome_analysis_project/data/assembly/PacBio_assembly/assembly.fasta"
-miniasm_assembly="/home/jili2251/genome_analysis_project/data/highergrade/assembly2/assembly.fasta"
+flye_assembly="/home/jili2251/gene_pro/data/assembly/PacBio_assembly/assembly.fasta"
+miniasm_assembly="/home/jili2251/gene_pro/data/highergrade/assembly2/assembly.fasta"
 
 
-output_dir="/home/jili2251/genome_analysis_project/data/highergrade/comparison_flye_miniasm"
+output_dir="/home/jili2251/gene_pro/data/highergrade/comparison_flye_miniasm"
 
 
 quast.py -o ${output_dir} \
