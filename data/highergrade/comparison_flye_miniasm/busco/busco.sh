@@ -13,10 +13,10 @@
 module load bioinfo-tools
 module load BUSCO/5.5.0
 
-flye_assembly="/home/jili2251/genomeAnalysis_project/data/assembly/PacBio_assembly/assembly.fasta"
-miniasm_assembly="/home/jili2251/genomeAnalysis_project/data/highergrade/assembly2/assembly.fasta"
+flye_assembly="/home/jili2251/gene_pro/data/assembly/PacBio_assembly/assembly.fasta"
+miniasm_assembly="/home/jili2251/gene_pro/data/highergrade/assembly2/assembly.fasta"
 
-output_dir="/home/jili2251/genomeAnalysis_project/data/highergrade/comparison_flye_miniasm/busco"
+output_dir="/home/jili2251/gene_pro/data/highergrade/comparison_flye_miniasm/busco"
 busco_output_dir_flye="${output_dir}/busco_flye"
 busco_output_dir_miniasm="${output_dir}/busco_miniasm"
 
