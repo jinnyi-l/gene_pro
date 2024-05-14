@@ -14,8 +14,8 @@ module load bioinfo-tools
 module load RepeatMasker
 module load hmmer/3.2.1
 
-ASSEMBLY="/home/jili2251/genome_analysis_project/data/assembly/PacBio_assembly_corrrected/corrected_assembly.fasta"
-OUTPUT_DIR="/home/jili2251/genome_analysis_project/data/masked-mapping/RepeatPac_masking_RepeatMasker"
+ASSEMBLY="/home/jili2251/gene_pro/data/assembly/PacBio_assembly_corrrected/corrected_assembly.fasta"
+OUTPUT_DIR="/home/jili2251/gene_pro/data/masked-mapping/RepeatPac_masking_RepeatMasker"
 
 RepeatMasker -pa 4 -species plants -gff -engine ncbi -dir $OUTPUT_DIR $ASSEMBLY
 
