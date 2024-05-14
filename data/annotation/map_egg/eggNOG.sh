@@ -11,9 +11,9 @@
 #SBATCH --error=flye_assembly.%j.err
 
 
-GENOME_FASTA="/home/jili2251/genomeAnalysis_project/data/masked-mapping/RepeatPac_masking_RepeatMasker/pilon_masked.fasta.masked"
-BRAKER_GFF="/home/jili2251/genomeAnalysis_project/data/annotation/annotated_RNAseq/annotated_BRAKER/braker.gff3"
-OUTPUT_PROTEINS="/home/jili2251/genomeAnalysis_project/data/annotation/map_egg.fasta"
+GENOME_FASTA="/home/jili2251/gene_pro/data/masked-mapping/RepeatPac_masking_RepeatMasker/pilon_masked.fasta.masked"
+BRAKER_GFF="/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/annotated_BRAKER/braker.gff3"
+OUTPUT_PROTEINS="/home/jili2251/gene_pro/data/annotation/map_egg.fasta"
 OUTPUT_PREFIX="eggNOG"
 NUM_CPUS="8"  
 
