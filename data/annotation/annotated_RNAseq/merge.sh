@@ -7,17 +7,17 @@
 #SBATCH -J Merge_BAM
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user jinyi.li.2251@student.uu.se
-#SBATCH --output=/home/jili2251/genome_analysis_project/data/annotation/annotated_RNAseq/Merge_BAM.%j.out
-#SBATCH --error=/home/jili2251/genome_analysis_project/data/annotation/annotated_RNAseq/Merge_BAM.%j.err
+#SBATCH --output=/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/Merge_BAM.%j.out
+#SBATCH --error=/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/Merge_BAM.%j.err
 
 module load bioinfo-tools
 module load samtools
 
 
-BAM_DIR="/home/jili2251/genome_analysis_project/data/masked-mapping/trimRNA_RepeatPac_masking_RepeatMasker_mapping"
+BAM_DIR="/home/jili2251/gene_pro/data/masked-mapping/trimRNA_RepeatPac_masking_RepeatMasker_mapping"
 
 
-OUTPUT_FILE="/home/jili2251/genome_analysis_project/data/annotation/annotated_RNAseq/merged.out.bam"
+OUTPUT_FILE="/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/merged.out.bam"
 
 
 cd $BAM_DIR
