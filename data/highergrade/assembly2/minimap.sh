@@ -18,6 +18,6 @@ module load minimap2
 
 minimap2 -x ava-pb -t4 /proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_06.fq.gz /proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_06.fq.gz > reads.paf
 
-miniasm -f /proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_06.fq.gz reads.paf > /home/jili2251/genome_analysis_project/data/highergrade/assembly2/assembly.gfa
+miniasm -f /proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_06.fq.gz reads.paf > /home/jili2251/gene_pro/data/highergrade/assembly2/assembly.gfa
 
-awk '/^S/{print ">"$2"\n"$3}' /home/jili2251/genome_analysis_project/data/highergrade/assembly2/assembly.gfa > /home/jili2251/genome_analysis_project/data/highergrade/assembly2/assembly.fasta
+awk '/^S/{print ">"$2"\n"$3}' /home/jili2251/gene_pro/data/highergrade/assembly2/assembly.gfa > /home/jili2251/gene_pro/data/highergrade/assembly2/assembly.fasta
