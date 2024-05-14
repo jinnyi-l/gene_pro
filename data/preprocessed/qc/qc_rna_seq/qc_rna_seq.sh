@@ -10,13 +10,11 @@
 #SBATCH --output=FastQC_RNAseq_job.%j.out
 
 module load bioinfo-tools
-module load FastQC/0.11.9  # Check for the correct version of FastQC available
+module load FastQC/0.11.9 
 
-# Paths to the untrimmed and trimmed RNA-seq data
 UNTRIMMED_PATH="/proj/uppmax2024-2-7/Genome_Analysis/4_Tean_Teh_2017/transcriptome/untrimmed"
 TRIMMED_PATH="/home/jili2251/gene_pro/data/preprocessed/trimmed_RNA"
 
-# Output directory for FastQC results
 FASTQC_PATH="/home/jili2251/gene_pro/data/preprocessed/qc/qc_rna_seq"
 
 # Run FastQC on untrimmed RNA-seq data
