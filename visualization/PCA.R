@@ -20,34 +20,29 @@ sample_info <- data.frame(
 )
 
 
-directory <- getwd()  # Current directory where count files are located
+directory <- getwd() 
 sampleFiles <- sample_info$fileName
 
-# Function to read count data
 read_counts <- function(filename) {
   read.table(file.path(directory, filename), header=TRUE, row.names=1)
 }
 
-# Read all files into a list
 countDataList <- lapply(sampleFiles, read_counts)
 
-# Combine all count data into a matrix
 countDataMatrix <- do.call(cbind, countDataList)
 
-# Create DESeqDataSet
 dds <- DESeqDataSetFromMatrix(countData = countDataMatrix,
                               colData = sample_info,
                               design = ~ sampleName)
 
-# Normalize data
 dds <- DESeq(dds)
 
-# PCA analysis
+
 rld <- rlogTransformation(dds)
 pcaData <- plotPCA(rld, intgroup="sampleName", returnData=TRUE)
 percentVar <- round(100 * attr(pcaData, "percentVar"))
 
-# Plotting PCA
+
 ggplot(pcaData, aes(PC1, PC2, color=sampleName)) +
   geom_point(size=3) +
   xlab(paste("PC1: ", percentVar[1], "% variance")) +
