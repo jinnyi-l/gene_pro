@@ -11,9 +11,8 @@
 #SBATCH --error=/home/jili2251/gene_pro/data/annotation/quantification/HTSeq_count.%j.err
 
 module load bioinfo-tools
-module load htseq  # Ensure HTSeq is loaded
-module load samtools  # Ensure samtools is loaded for any needed operations
-
+module load htseq  
+module load samtools  
 
 BAM_DIR="/home/jili2251/gene_pro/data/masked-mapping/trimRNA_RepeatPac_masking_RepeatMasker_mapping"
 ANNOTATED_GTF="/home/jili2251/gene_pro/data/annotation/annotated_RNAseq/annotated_BRAKER/corrected.gtf"
@@ -35,9 +34,9 @@ BAM_FILES=(
 
 
 for BAM_FILE in "${BAM_FILES[@]}"; do
-    # Construct the path to the BAM file
+   
     FULL_BAM_PATH="$BAM_DIR/$BAM_FILE"
-    # Output file path for HTSeq-count results
+  
     OUTPUT_COUNTS="$OUTPUT_DIR/${BAM_FILE%.bam}_counts.txt"
     
     echo "Running HTSeq-count on $BAM_FILE..."
